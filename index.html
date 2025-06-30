@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="sendWhatsMovil" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
+        <span class="material-symbols-outlined align-middle">call</span>
+        <span class="texto-clip">Whatsapp</span>
+    </button>
+</body>
+<script>
+    // agrega el url al boton de whatsapp
+    document.getElementById("sendWhatsMovil").setAttribute("href", 'https://wa.me/?text=' + encodeURIComponent(window.location.href));
+</script>
+</html>
