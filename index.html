@@ -8,26 +8,43 @@
 <body>
     <button id="sendWhatsMovil" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
         <span class="material-symbols-outlined align-middle">call</span>
-        <span class="texto-clip">Whatsapp</span>
+        <span class="texto-clip">Whatsapp mobil y desktop</span>
     </button>
 
     <button id="sendWhatsMovil2" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
         <span class="material-symbols-outlined align-middle">call</span>
-        <span class="texto-clip">Whatsapp 2</span>
+        <span class="texto-clip">Whatsapp mobil</span>
+    </button>
+
+    <button id="sendWhatsMovil3" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
+        <span class="material-symbols-outlined align-middle">call</span>
+        <span class="texto-clip">Whatsapp desktop</span>
     </button>
 </body>
 <script>
     
-    // agrega el url al boton de whatsapp
-    // document.getElementById("sendWhatsMovil").setAttribute("href", 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href));
 
     document.getElementById("sendWhatsMovil").addEventListener('click', function(e) {
         var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href);
+        window.open(url, '_blank');
+
+        var isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile)
+            var url = 'https://wa.me/?text=' + encodeURIComponent(window.location.href);
+        else
+            var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href);
+
         window.open(url, '_blank');
     });
 
      document.getElementById("sendWhatsMovil2").addEventListener('click', function(e) {
         var url = 'https://wa.me/?text=' + encodeURIComponent(window.location.href);
+        window.open(url, '_blank');
+    });
+
+      document.getElementById("sendWhatsMovil3").addEventListener('click', function(e) {
+        var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href);
         window.open(url, '_blank');
     });
 </script>
