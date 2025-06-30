@@ -10,9 +10,25 @@
         <span class="material-symbols-outlined align-middle">call</span>
         <span class="texto-clip">Whatsapp</span>
     </button>
+
+    <button id="sendWhatsMovil2" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
+        <span class="material-symbols-outlined align-middle">call</span>
+        <span class="texto-clip">Whatsapp 2</span>
+    </button>
 </body>
 <script>
+    
     // agrega el url al boton de whatsapp
-    document.getElementById("sendWhatsMovil").setAttribute("href", 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href));
+    // document.getElementById("sendWhatsMovil").setAttribute("href", 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href));
+
+    document.getElementById("sendWhatsMovil").addEventListener('click', function(e) {
+        var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(window.location.href);
+        window.open(url, '_blank');
+    });
+
+     document.getElementById("sendWhatsMovil2").addEventListener('click', function(e) {
+        var url = 'https://wa.me/?text=' + encodeURIComponent(window.location.href);
+        window.open(url, '_blank');
+    });
 </script>
 </html>
