@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    #fecha_exc {
-        background-color: red;
-        pointer-events: none;
-    }
-    #fecha_exc2 {
-        background-color: blue;
-    }
-</style>
 <body>
     <button id="sendWhatsMovil" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
         <span class="material-symbols-outlined align-middle">call</span>
@@ -32,7 +23,7 @@
 
     <div class="row m-t-5">
         <div class="col-12 m-r-0">
-            <input id="fecha_exc" name="fecha_exc" type="text" onchange="cambiarFecha();cargarMod();" placeholder="Seleccionar una fecha" autocomplete="off"
+            <input id="fecha_exc" readonly="readonly" name="fecha_exc" type="text" onchange="cambiarFecha();cargarMod();" placeholder="Seleccionar una fecha" autocomplete="off"
                     class="fecha_exc brd-2-s-cccccc ltr-f-w-b ltr-999999 h-50-ip w-100-prc brd-r-4 p-l-15 seleccion-fecha" >
             <i class="far fa-calendar-alt position-absolute r-25 t-15 ltr-18 ltr-999999"></i>
         </div>
