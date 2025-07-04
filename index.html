@@ -23,12 +23,14 @@
 
     <div class="row m-t-5">
         <div class="col-12 m-r-0">
-            <input id="fecha_exc" readonly="readonly" name="fecha_exc" type="text" onchange="cambiarFecha();cargarMod();" placeholder="Seleccionar una fecha" autocomplete="off"
+            <input id="fecha_exc" name="fecha_exc" type="text" onchange="cambiarFecha();cargarMod();" placeholder="Seleccionar una fecha" autocomplete="off"
                     class="fecha_exc brd-2-s-cccccc ltr-f-w-b ltr-999999 h-50-ip w-100-prc brd-r-4 p-l-15 seleccion-fecha" >
             <i class="far fa-calendar-alt position-absolute r-25 t-15 ltr-18 ltr-999999"></i>
         </div>
         
     </div>
+    <br>
+    <br>
     <div class="row m-t-5">
         <div class="col-12 m-r-0">
             <input id="fecha_exc2" name="fecha_exc" type="text" onchange="cambiarFecha();cargarMod();" placeholder="Seleccionar una fecha" autocomplete="off"
@@ -39,7 +41,12 @@
     </div>
 </body>
 <script>
-    
+    $( document ).ready(function() {
+		var isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+		if (isMobile)
+			$('#fecha_exc').attr('readonly', true);
+	});
 
     document.getElementById("sendWhatsMovil").addEventListener('click', function(e) {
         var isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
