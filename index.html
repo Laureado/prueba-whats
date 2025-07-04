@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <button id="sendWhatsMovil" class="ltr-18 ltr-1567B0" href="#" data-action="share/whatsapp/share">
@@ -44,9 +44,9 @@
 <script>
     $( document ).ready(function() {
 		var isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-		if (isMobile)
+		if (isMobile) {
 			$('#fecha_exc').attr('readonly', true);
+        }
 	});
 
     document.getElementById("sendWhatsMovil").addEventListener('click', function(e) {
