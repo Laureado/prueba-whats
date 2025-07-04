@@ -48,6 +48,9 @@
 			$('#fecha_exc').attr('readonly', true);
         }
 	});
+	function cambiarFecha() {
+		$('#fecha_exc').css('background-color','red');
+	}
 
     document.getElementById("sendWhatsMovil").addEventListener('click', function(e) {
         var isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
